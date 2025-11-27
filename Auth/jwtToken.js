@@ -15,5 +15,4 @@ const refreshJwtToken=(user)=>{
   }, refreshToken, { expiresIn: Math.floor(Date.now()+ (7 * 24 * 60 * 60 * 1000 )/ 1000) , });
 }
 
-console.log(refreshToken)
 module.exports= {generateJwtToken,refreshJwtToken}
