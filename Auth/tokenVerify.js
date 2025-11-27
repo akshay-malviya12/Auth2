@@ -10,8 +10,7 @@ const tokenVerify = (req, resp) => {
   if (!refresh_token) {
     return resp.status(401).json({ Message: "Refresh token required" });
   }
-console.log(refreshTokenSecret)
-console.log(refresh_token)
+
   // Verify the refresh token
   jwt.verify(refresh_token, refreshTokenSecret, (err, decoded) => {
     if (err) {
