@@ -8,12 +8,6 @@ app.use(express.json());
 
 const port = 8080;
 
-
-// Define a route for GET requests to the root URL
-app.get('/', (req, res) => {
-  res.send('Hello World from Express!');
-});
-
 app.post("/register",register)
 app.post("/login",login)
 app.post("/refresh-token",refreshToken)
